@@ -13,7 +13,7 @@ def list_course(request):
 
 def course_detail(request, id):
     course = get_object_or_404(Course, id=id)
-    return render(request, 'courses/course_detail.html', {
+    return render(request, 'courses/blah_detail.html', {
         'course': course,
     })
 
@@ -21,6 +21,6 @@ def course_detail(request, id):
 def step_detail(request, course_id, step_id):
     course = get_object_or_404(Course, id=course_id)
     step = get_object_or_404(Step, id=step_id)
-    return render(request, 'courses/step_detail.html', {
+    return render(request, 'courses/fake_detail.html', {
         'step': step,
     })
